@@ -11,21 +11,21 @@ public class LoginAutomationTest {
     @Test
     public void testLogin() {
         // Set up the WebDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver-win64");
+        System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver-win64\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         try {
             // Navigate to the login page
-            driver.get("https://example.com/login");
+            driver.get("https://practicetestautomation.com/practice-test-login/");
             // Locate the username and password fields
             WebElement usernameField = driver.findElement(By.id("username"));
             WebElement passwordField = driver.findElement(By.id("password"));
-            WebElement loginButton = driver.findElement(By.id("loginButton"));
+            WebElement loginButton = driver.findElement(By.id("submit"));
             // Perform login
-            usernameField.sendKeys("testUser");
-            passwordField.sendKeys("testPassword");
+            usernameField.sendKeys("student");
+            passwordField.sendKeys("Password123");
             loginButton.click();
             // Validate successful login
-            String expectedTitle = "Dashboard";
+            String expectedTitle = "Logged In Successfully | Practice Test Automation";
             String actualTitle = driver.getTitle();
             assertEquals(expectedTitle, actualTitle);
         } finally {
