@@ -11,7 +11,7 @@ public class LoginAutomationTest {
     @Test
     public void testLogin() {
         // Set up the WebDriver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nnavi\\OneDrive\\Desktop\\chromedriver-win64");
+        System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver-win64");
         WebDriver driver = new ChromeDriver();
         try {
             // Navigate to the login page
