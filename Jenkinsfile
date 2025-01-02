@@ -20,7 +20,7 @@ pipeline {
                 script {
                     bat '''
                     set PATH=%JAVA_HOME%;%MAVEN_HOME%;%PATH%
-                    mvn clean install -U
+                    mvn clean install
                     '''
                 }
             }
