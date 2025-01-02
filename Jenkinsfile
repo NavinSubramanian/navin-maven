@@ -25,17 +25,17 @@ pipeline {
                 }
             }
         }
-        stage('Run Tests') {
+        stage('Coverage Report') {
             steps {
                 script{
                     bat '''
                     set PATH=%JAVA_HOME%;%MAVEN_HOME%;%PATH%
-                    mvn test
+                    mvn test jacoco:report
                     '''
                 }
             }
         }
-        stage('Coverage') {
+        stage('Verify') {
             steps {
                 script{
                     bat '''
