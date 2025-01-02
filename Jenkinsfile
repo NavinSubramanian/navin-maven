@@ -30,7 +30,8 @@ pipeline {
                 script{
                     bat '''
                     set PATH=%JAVA_HOME%;%MAVEN_HOME%;%PATH%
-                    mvn test jacoco:report
+                    mvn test
+                    mvn jacoco:report
                     '''
                 }
             }
