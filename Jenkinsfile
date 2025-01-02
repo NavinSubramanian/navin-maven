@@ -55,7 +55,7 @@ pipeline {
                                      -Dsonar.projectName=navin-maven ^
                                      -Dsonar.host.url=http://localhost:9000 ^
                                      -Dsonar.token=sqp_f70acc90fa56b2e64447d5537ac554cd22e95fb0 ^
-                                     -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+                                     -Dsonar.coverage.jacoco.xmlReportPaths=target/surefire-reports/TEST-com.example.automation.LoginAutomationTest.xml
                                      
                   '''
                 }
